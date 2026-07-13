@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="bg-music" src="music.mp3" loop></audio>
+    
+    <div id="particles-container"></div>
+    <div id="confetti-container"></div>
+
+    <section id="step-1" class="step active">
+        <div class="glass-card">
+            <h1 class="title-small">Menghitung seberapa lama kita sudah berteman...</h1>
+
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <div class="status-container">
+                <p id="status-message" class="status-text">Menganalisis kenangan...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="step-2" class="step">
+        <div class="glass-card duration-card">
+            <div class="counter-container">
+                
+                    <span class="number" id="days-count">39</span>
+                    <span class="label">Hari</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="hours-count">936</span>
+                    <span class="label">Jam</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="mins-count">56160</span>
+                    <span class="label">Menit</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="secs-count">3369600</span>
+                    <span class="label">Detik</span>
+                </div>
+            </div>
+
+            <p class="subtitle fade-in-delay-1">Sudah selama ini kita kenalan.</p>
+            <p class="small-text fade-in-delay-2">Tapi kita masih just friend :/</p>
+
+            <button id="btn-step-2" class="btn primary-btn fade-in-delay-3" style="display: none;">Lanjut
+                &rarr;</button>
+        </div>
+    </section>
+
+    <section id="step-3" class="step">
+        <div class="glass-card message-card">
+            <div class="typewriter-container">
+                <p id="typewriter-text" class="typewriter-text"></p>
+            </div>
+            <button id="btn-step-3" class="btn primary-btn"
+                style="opacity: 0; pointer-events: none; transition: opacity 0.5s ease;">Lanjut</button>
+        </div>
+    </section>
+
+    <section id="step-4" class="step final-step">
+        <div class="content-wrapper">
+            <img src="https://i.pinimg.com/736x/e8/16/5d/e8165d0dce7ccafa8386a1dcfd9061c8.jpg" alt="Crush Reaction"
+                class="reaction-img slide-up">
+            <h1 class="final-title slide-up" style="margin-top: 1rem;">I Have Crush On You</h1>
+
+            <div class="final-text fade-in-delay-1">
+                <p> HAHAHA setelah aku memendam perasaan ini, akhirnya aku bisa ngungkapin juga. </p>
+                <p>Jadi gimana menurutmu?</p>
+            </div>
+
+            <div class="button-group fade-in-delay-2" style="margin-top: 3rem;">
+                <button id="btn-accept" class="btn accent-btn pulse-hover">I feel the same</button>
+                <button id="btn-reject" class="btn ghost-btn">Let's just be friends</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="step-5" class="step celebration-step">
+        <div class="content-wrapper">
+            <img src="https://i.pinimg.com/736x/0c/85/55/0c85550beb728d479b0d023b95b86943.jpg" alt="Reaction"
+                class="reaction-img slide-up">
+            <h2 class="celebration-title slide-up fade-in-delay-1" style="margin-top: 1rem;">Eh serius? kamu juga suka
+                aku?</h2>
+
+            <div class="final-text fade-in-delay-2">
+                <p>Aksjdnsisbdianaidbdisakx</p>
+                <p>i love you</p>
+            </div>
+
+            <div class="button-group fade-in-delay-3" style="margin-top: 3rem;">
+                <button id="btn-next-celebration" class="btn primary-btn pulse-hover">Love you too</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="step-7" class="step celebration-step">
+        <div class="content-wrapper">
+            <img src="https://i.pinimg.com/736x/1c/49/a1/1c49a1cc007d8cd7a2ea6b258925aecb.jpg"
+                alt="Date Prompt Reaction" class="reaction-img slide-up">
+            <p class="date-text slide-up fade-in-delay-1"
+                style="font-size: 1.8rem; line-height: 1.4; margin-top: 1rem;">Sekarang... boleh aku panggil kamu sayang? ✨</p>
+
+            <div class="button-group fade-in-delay-2" style="margin-top: 3rem;">
+                <button id="btn-chat" class="btn primary-btn pulse-hover">boleh ajaaa</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="step-6" class="step">
+        <div class="content-wrapper">
+            <img src="https://i.pinimg.com/736x/35/f5/e2/35f5e298f9cbea1565913319ab36f7d4.jpg" alt="Friends Reaction"
+                class="reaction-img slide-up">
+            <div class="final-text fade-in-delay-1">
+                <p>Gapapa kok kalau kita tetap temenan aja.</p>
+                <p>Tapi setelah ini jangan asing ya?</p>
+                <p>Maaf banget kalau semisal ini ganggu kamu atau gimana.</p>
+            </div>
+
+            <div class="button-group fade-in-delay-3" style="margin-top: 3rem;">
+                <button id="btn-chat-friends" class="btn primary-btn pulse-hover">Iyaaa</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
